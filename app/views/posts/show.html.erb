@@ -1,0 +1,26 @@
+<div class="titleDiv"><p class="title">  Espen Sommer Eide – artist/composer </p></div>
+
+
+<div class="empty1">  </div>
+
+<div class="article">
+
+<p class="title"><%= @post.title %></p><br>
+<p>
+  <%=raw @post.content %>
+</p>
+<p><%= @post.contentlong %></p>
+
+<% if current_user %>
+<p>
+  <strong>Author:</strong>
+  <%= @post.author %>
+</p>
+
+<% end %>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
+
+<p id="notice"><%= notice %></p>
+</div>

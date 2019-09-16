@@ -1,0 +1,29 @@
+<div class="titleDiv"><p class="title">  Espen Sommer Eide – artist/composer </p></div>
+
+
+<div class="empty1">  </div>
+
+<div class="article">
+
+<p class="title"><%= @page.title %></p><br>
+<p>
+  <%=raw @page.content %>
+</p>
+
+<% if current_user %>
+<p>
+  <strong>Importance:</strong>
+  <%= @page.importance %>
+</p>
+
+<p>
+  <strong>Clouded:</strong>
+  <%= @page.clouded %>
+</p>
+<% end %>
+
+<%= link_to 'Edit', edit_page_path(@page) %>
+<%= link_to 'Back', pages_path %>
+
+<p id="notice"><%= notice %></p>
+</div>

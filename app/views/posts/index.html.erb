@@ -1,0 +1,38 @@
+
+<div class="titleDiv">
+      <p class="title">  Espen Sommer Eide – artist/composer </p>
+</div>
+<div class="empty1">  </div>
+
+    <% @posts.each do |post| %>
+    <%= link_to post do %><br><br>
+      <table>
+        <tr>
+          <td><%= post.title %></td>
+          <% if current_user %>
+          <td><%= link_to 'Show', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% end %>
+        </tr>
+
+      </table>
+
+    <br class="linebreak">
+    <% end %>
+    <% end %>
+
+
+<br>
+
+
+
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to 'New Post', new_post_path %>
+  <%= link_to 'Log Out', logout_path %>
+<% else %>
+  <%= link_to 'Log In', login_path %>
+<% end %>
+
+<p id='notice'><%= notice %></p>
