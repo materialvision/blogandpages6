@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :action_text_rich_texts
   resources :users
   resources :posts
   resources :pages

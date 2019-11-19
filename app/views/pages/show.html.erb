@@ -5,9 +5,8 @@
 
 <div class="article">
 
-<p class="title"><%= @page.title %></p><br>
 <p>
-  <%=raw @page.content %>
+  <%= raw CGI.unescapeHTML @page.content.to_s %>
 </p>
 
 <% if current_user %>
@@ -20,9 +19,11 @@
   <strong>Clouded:</strong>
   <%= @page.clouded %>
 </p>
+<%= link_to 'Edit', edit_page_path(@page) %>
+
 <% end %>
 
-<%= link_to 'Edit', edit_page_path(@page) %>
+
 <%= link_to 'Back', pages_path %>
 
 <p id="notice"><%= notice %></p>

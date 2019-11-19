@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Action Text Rich Texts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Body</th>
+      <th>Record type</th>
+      <th>Record</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @action_text_rich_texts.each do |action_text_rich_text| %>
+      <tr>
+        <td><%= action_text_rich_text.name %></td>
+        <td><%= action_text_rich_text.body %></td>
+        <td><%= action_text_rich_text.record_type %></td>
+        <td><%= action_text_rich_text.record_id %></td>
+        <td><%= link_to 'Show', action_text_rich_text %></td>
+        <td><%= link_to 'Edit', edit_action_text_rich_text_path(action_text_rich_text) %></td>
+        <td><%= link_to 'Destroy', action_text_rich_text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Action Text Rich Text', new_action_text_rich_text_path %>

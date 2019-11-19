@@ -1,0 +1,2 @@
+module ActionTextRichTextsHelper
+end
