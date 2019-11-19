@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<div class="titleDiv"><p class="title">  Espen Sommer Eide – works <br><br><%= link_to 'Back', projects_path %></p></div>
+
+
+<div class="empty1">  </div>
+<p>
+
+  <strong><%= @project.title %></strong>
+  <br><br>
+
+  <%= @project.info %>
+</p>
+
+
+<div class="article">
+
+<p>
+  <%= raw CGI.unescapeHTML @project.content.to_s %>
+</p>
+
+<% if current_user %>
+<p>
+  <strong>Importance:</strong>
+  <%= @project.importance %>
+</p>
+
+<p>
+  <strong>Frontpage:</strong>
+  <%= @project.frontpage %>
+</p>
+<%= link_to 'Edit', edit_project_path(@project) %>
+
+<% end %>
+
+
+<%= link_to 'Back', projects_path %>
+</div>

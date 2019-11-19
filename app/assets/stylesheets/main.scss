@@ -24,6 +24,7 @@ background-color: rgb(253, 253, 255);
   list-style-type: none;
   margin: 2em;
   padding: 0;
+  line-height: 1.5;
 }
 .linebreak{
   display: none;
@@ -34,14 +35,13 @@ a{
 text-decoration: none;
 color: black;
 font-family: sans-serif;
-display: grid;
-padding-bottom: 1em;
+//display: grid;
+padding-bottom: 0.2em;
 border-bottom: 1px solid #999;
 
   &:hover {
     color: #000;
-
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
   }
 
 }
@@ -49,6 +49,7 @@ border-bottom: 1px solid #999;
   grid-column-start: span 4;
 }
 */
+
 .article{
   grid-column: 2 / 5;
 }

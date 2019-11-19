@@ -1,0 +1,38 @@
+<p id='notice'><%= notice %></p>
+<div class="titleDiv">
+      <p class="title">  Espen Sommer Eide – works <br><br><br></p>
+</div>
+<div class="empty1">  </div>
+
+    <% @projects.each do |project| %>
+    <%= link_to project do %><br><br>
+    <table><tr>
+          <strong><%= project.title %></strong><br>
+          <p><%= project.info %></p>
+          <% if current_user %>
+          <p>
+          <%= link_to 'Edit', edit_project_path(project) %><br>
+          <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+          </p>
+        </tr>
+
+      </table>
+
+    <br class="linebreak">
+    <% end %>
+    <% end %>
+
+
+<br>
+
+
+
+<% if current_user %>
+  <p><br><%= link_to 'New Project', new_project_path %><br>
+  <%= link_to 'Log Out', logout_path %><br>
+    Logged in as <%= current_user.email %></p>
+
+<% else %>
+  <p><br><%= link_to 'Log In', login_path %></p>
+<% end %>

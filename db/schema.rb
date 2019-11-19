@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_16_183624) do
+ActiveRecord::Schema.define(version: 2019_11_19_082214) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -73,6 +73,16 @@ ActiveRecord::Schema.define(version: 2019_09_16_183624) do
     t.datetime "updated_at"
     t.string "author", limit: 255
     t.text "contentlong"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "title"
+    t.text "info"
+    t.text "content"
+    t.integer "importance"
+    t.boolean "frontpage"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "taggings", force: :cascade do |t|
