@@ -20,9 +20,9 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development. No bring them on!
-# /storage/*
-# !/storage/.keep
+# Ignore uploaded files in development. 
+ /storage/*
+ !/storage/.keep
 
 /public/assets
 /public/system
@@ -30,6 +30,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/secrets/*
 
 /public/packs
 /public/packs-test
