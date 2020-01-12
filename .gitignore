@@ -20,10 +20,11 @@
 !/log/.keep
 !/tmp/.keep
 
-# Ignore uploaded files in development. 
+# Ignore uploaded files in development.
  /storage/*
  !/storage/.keep
 
+/public/dracodex
 /public/assets
 /public/system
 .byebug_history
